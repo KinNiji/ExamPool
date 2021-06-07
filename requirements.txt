@@ -1,0 +1,7 @@
+dash_html_components==1.1.2
+PyMySQL==1.0.2
+requests==2.25.1
+dash==1.19.0
+dash_core_components==1.15.0
+dash_bootstrap_components==0.12.2
+Pillow==8.2.0
