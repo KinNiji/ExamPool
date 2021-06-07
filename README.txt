@@ -1,4 +1,4 @@
-使用方法：
+# 使用方法：
 1、安装依赖： pip install -r requirements.txt
 2、数据库复制： 数据库备份为backup.sql
 3、修改mysql.json中的相关配置，以符合您的配置
