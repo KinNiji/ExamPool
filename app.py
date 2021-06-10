@@ -324,15 +324,16 @@ index_content = html.Div(
             html.P("模拟题库，基于Dash编写，支持四、五选项的单选和多选，有顺序、随机、错题三种模式可选。浏览器建议缩放比133%，笔记本缩放比请自行调整。限于网站机能，点击校对答案和切换题目时可能会出现卡顿或渲染失败的情况，可下载源码后部署至本地服务器以消除上述卡顿。"),
             html.P("！卡顿还是很明显的，十分建议下载源码并在本地服务器运行。", style={'color': 'red'}),
             html.P("稳定版网址：https://exampool.cn1.utools.club 开发版网址：https://exampooldevelopment.cn1.utools.club"),
+            html.P("！做完题或者退出时一定要先点击保存", style={'color': 'red'}),
             html.Hr(),
-            html.H4("即将实现的功能：", className='mb-4'),
+            # html.H4("即将实现的功能：", className='mb-4'),
             # html.P("2.用户注册、登录系统", style={'text-decoration':'line-through'}),
-            html.P("——————————已停止开发——————————"),
-            html.P("4.模拟考试模式"),
-            html.P("5.移动端网页适配"),
-            html.P("6.快捷键实现切题和校对功能"),
-            html.P("7.数据分析功能"),
-            html.Hr(),
+            # html.P("——————————已停止开发——————————"),
+            # html.P("4.模拟考试模式"),
+            # html.P("5.移动端网页适配"),
+            # html.P("6.快捷键实现切题和校对功能"),
+            # html.P("7.数据分析功能"),
+            # html.Hr(),
             html.P([
                 "本项目开源，当前版本：Development Ver2.4 & Test Ver1.0", 
                 dbc.Badge("github源码", href="https://github.com/KinNiji/ExamPool", color="primary", className='ml-3')
@@ -413,7 +414,7 @@ mis_content = html.Div([
     dbc.Select(options=bank_list, value=bank_list[0]['value'], id={'mode': 'mis', 'name': 'bank-name'}, className='mb-3'),
     dbc.Label("错题量（显示为0表示该题库无错题，不会进入练习）"),
     dbc.Input(value=0, id={'mode': 'mis', 'name': 'max-input'}, type="number", min=0, step=1, className='mb-3', disabled=True),
-    dbc.Button('开始', id={'mode': 'mis', 'name': 'start-button'}),
+    dbc.Button('开始（题目已打乱）', id={'mode': 'mis', 'name': 'start-button'}),
 ], id={'mode': 'mis', 'name': 'exercise-content'})
 
 def buildAnswerReveal():
@@ -616,7 +617,7 @@ def update_user_info_text(user_info):
     elif user_info == "null":
         raise PreventUpdate
     else:
-        return '用户 ' + user_info['nickname'], False
+        return '用户 {nickname}#{invite_code}'.format(nickname=user_info['nickname'], invite_code=user_info['invite_code']), False
 
 ## 顺序模式
 # 监听题库名，并设置起始题号上限
