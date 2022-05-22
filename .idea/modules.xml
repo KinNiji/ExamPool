@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/2021_12/2021_12.iml" filepath="$PROJECT_DIR$/2021_12/2021_12.iml" />
-      <module fileurl="file://$PROJECT_DIR$/2021_6/2021_6.iml" filepath="$PROJECT_DIR$/2021_6/2021_6.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ExamPool.iml" filepath="$PROJECT_DIR$/.idea/ExamPool.iml" />
     </modules>
   </component>

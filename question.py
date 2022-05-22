@@ -73,7 +73,7 @@ class Pre:
                 chapter_name = ce_yan.find_element(By.CSS_SELECTOR, 'h3')
                 questions = ce_yan.find_elements(By.CSS_SELECTOR, '#ZyBottom > div.TiMu')
 
-                with open('../question_bank/mao_theories/all.txt', 'a', encoding='utf-8') as f:
+                with open('question_bank/mao_theories/all.txt', 'a', encoding='utf-8') as f:
                     print(chapter_name.text.strip())
                     f.write(chapter_name.text.strip())
 
@@ -162,7 +162,7 @@ class Pre:
 
     @staticmethod
     def text_process():
-        with open('../question_bank/mao_theories/毛概题库.txt', 'r', encoding='utf-8') as f:
+        with open('question_bank/mao_theories/毛概题库.txt', 'r', encoding='utf-8') as f:
             file_raw = f.read()
         # [(一、单选题)(二、多选题)(三、是非题)(四、论述题)]
         raw_split = file_raw.split('四、论述题')
