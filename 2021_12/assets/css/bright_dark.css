@@ -1,0 +1,15 @@
+:root {
+    --bgColor: #fff;
+  	--textDefault: #000;
+    --primary: #0B4CFF;
+    --secondary: #FF0B70;
+    --terciary: #00BA5B;
+}
+
+:root[data-theme='dark'] {
+	--bgColor: #000;
+  	--textDefault: #fff;
+    --primary: #ACC2FF;
+    --secondary: #FFAFD0;
+    --terciary: #86E1B3;
+}
